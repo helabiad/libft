@@ -6,12 +6,12 @@
 /*   By: helabiad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 14:40:37 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/25 14:40:39 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/27 14:17:37 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_words_in_string(char const *s, char delimiter_char)
+static size_t	ft_words_in_string(char const *s, char delimiter_char)
 {
 	size_t	words;
 	size_t	i;
@@ -29,7 +29,7 @@ size_t	ft_words_in_string(char const *s, char delimiter_char)
 	return (words);
 }
 
-size_t	ft_find_start(char const *s, char delimiter_char)
+static size_t	ft_find_start(char const *s, char delimiter_char)
 {
 	size_t	start;
 
@@ -39,7 +39,7 @@ size_t	ft_find_start(char const *s, char delimiter_char)
 	return (start);
 }
 
-size_t	ft_find_end(char const *s, char delimiter_char)
+static size_t	ft_find_end(char const *s, char delimiter_char)
 {
 	size_t	end;
 
@@ -53,7 +53,7 @@ size_t	ft_find_end(char const *s, char delimiter_char)
 	return (end);
 }
 
-char	**ft_fill_array(char **ptr, char const *s_ptr, char c, size_t words)
+static char	**ft_fill_array(char **ptr, char const *s_ptr, char c, size_t words)
 {
 	size_t		end;
 	size_t		i;
