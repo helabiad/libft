@@ -6,13 +6,13 @@
 /*   By: helabiad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 05:59:12 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/24 15:45:00 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:29:02 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_how_many_digit(long int n)
+static size_t	ft_how_many_digit(long int n)
 {
 	size_t	i;
 
@@ -25,12 +25,12 @@ size_t	ft_how_many_digit(long int n)
 	return (i);
 }
 
-char	ft_int_to_char(long int n)
+static char	ft_int_to_char(long int n)
 {
 	return (n + '0');
 }
 
-char	*ft_negative_number(int n)
+static char	*ft_negative_number(int n)
 {
 	long	nb;
 	size_t	i;
@@ -54,7 +54,7 @@ char	*ft_negative_number(int n)
 	return (ptr);
 }
 
-char	*ft_positive_number(int n)
+static char	*ft_positive_number(int n)
 {
 	int		nb;
 	size_t	i;
