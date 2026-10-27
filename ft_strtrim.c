@@ -6,13 +6,13 @@
 /*   By: helabiad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 22:42:46 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/21 17:05:09 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/27 15:09:32 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_find_start(char const *s1, char const *set)
+static size_t	ft_find_start(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -32,7 +32,7 @@ size_t	ft_find_start(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	ft_find_end(char const *s1, char const *set)
+static size_t	ft_find_end(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -52,12 +52,12 @@ size_t	ft_find_end(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	ft_real_length(size_t start, size_t end)
+static size_t	ft_real_length(size_t start, size_t end)
 {
 	return (end - start);
 }
 
-char	*ft_allocation_and_copy(char const *s1, size_t real_length)
+static char	*ft_allocation_and_copy(char const *s1, size_t real_length)
 {
 	char	*ptr;
 
