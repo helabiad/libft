@@ -6,7 +6,7 @@
 /*   By: helabiad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 22:01:20 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/20 22:41:36 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:02:53 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	total_size;
 	char	*dst;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	total_size = s1_len + s2_len;
