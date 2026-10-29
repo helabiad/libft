@@ -6,7 +6,7 @@
 /*   By: helabiad <helabiad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 01:15:41 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/29 13:50:01 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/29 18:20:29 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL)
+	if (lst == NULL || dell == NULL)
 		return ;
-	if (del != NULL)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }
