@@ -6,7 +6,7 @@
 /*   By: helabiad <helabiad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 15:27:22 by helabiad          #+#    #+#             */
-/*   Updated: 2026/10/29 18:27:05 by helabiad         ###   ########.fr       */
+/*   Updated: 2026/10/29 20:58:21 by helabiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newnode;
 	void	*content;
 
-	if (lst == NULL || f == NULL)
+	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
 	newlst = NULL;
 	while (lst != NULL)
